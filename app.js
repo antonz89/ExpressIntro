@@ -1,12 +1,13 @@
 // Bring in Express code
 const express = require('express')
-​
+
 		const app = express()
+
 		const port = 3000
-​
+
 		app.use(express.json()) // This line is necessary for Express to be able to parse JSON in request body's
-​
-		const favoriteMovieList = [{
+		
+        const favoriteMovieList = [{
 			title: "Star Wars",
 			starRating: 5,
 			isRecommended: true,
@@ -19,11 +20,11 @@ const express = require('express')
 			createdAt: new Date(),
 			lastModified: new Date()
 		}];
-​
+
 		app.get('/', (req, res) => {
 			res.send('Hello World!')
 		})
-​
+
 		app.listen(port, () => {
 			console.log(`Example app listening on port ${port}`)
 		})
